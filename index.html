@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explora Medellín con los mejores tours guiados. Cultura, aventura y naturaleza en un solo lugar.">
+  <link rel="stylesheet" href="style.css">
+  <title>Tours en Medellín | Turismo personalizado</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide active" style="background-image: url('img/GI-1155850682-El-Penol.jpg');"></div>
+        <div class="slide" style="background-image: url('img/MedellADn-foto-ProColombia.webp');"></div>
+        <div class="slide" style="background-image: url('img/68850-Botero-Sculpture-Park.webp');"></div>
+        <div class="slide" style="background-image: url('img/XAA7V7QQHRHR5DN7JQ7BEA3R6Q.jpg');"></div>
+        <div class="slide" style="background-image: url('img/P4212386_opt.jpg');"></div>
+        <div class="overlay">
+            <h3>Conoce Medellín con Fercho</h3>
+            <h1>La ciudad de la eterna primavera</h1>
+            <button onclick="document.getElementById('destino').scrollIntoView()">Vamos</button>
+        </div>
+    </div>
+    <div id="destino">
+        <h2>Nuestros Planes para Conocer Medellín</h2>
+        <div class="plan-container">
+            <div class="plan">
+                <img src="img/plan1.jpg">
+                <div class="plan-info">
+                    <h3>Traslados desde y hacia el Aeropuerto</h3>
+                    <button onclick="openPlanModal('traslados')" data-plan="traslados">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan2.jpg">
+                <div class="plan-info">
+                    <h3>City Tour Medellín</h3>
+                    <h4>Lo mejor de la ciudad</h4>
+                    <button onclick="openPlanModal('citytour')" data-plan="citytour">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan3.jpg">
+                <div class="plan-info">
+                    <h3>Tour del Café</h3>
+                    <h4>Una experiencia auténtica</h4>
+                    <button onclick="openPlanModal('cafe')" data-plan="cafe">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan4.jpg">
+                <div class="plan-info">
+                    <h3>Tour Parapente San Félix</h3>
+                    <h4>Vuela sobre el valle</h4>
+                    <button onclick="openPlanModal('parapente')" data-plan="parapente">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/guata.jpg">
+                <div class="plan-info">
+                    <h3>Tour Guatapé</h3>
+                    <h4>Altura, color y adrenalina</h4>
+                    <button onclick="openPlanModal('guata')" data-plan="guata">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan5.jpg">
+                <div class="plan-info">
+                    <h3>Tour Hacienda Nápoles</h3>
+                    <h4>Naturaleza y aventura</h4>
+                    <button onclick="openPlanModal('napoles')" data-plan="napoles">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan6.jpg">
+                <div class="plan-info">
+                    <h3>Tour Pueblos de Antioquia</h3>
+                    <h4>Cultura y tradición</h4>
+                    <button onclick="openPlanModal('oriente')" data-plan="oriente">Ver más</button>
+                </div>
+            </div>
+            <div class="plan">
+                <img src="img/plan7.jpg">
+                <div class="plan-info">
+                    <h3>Tour Pablo Escobar</h3>
+                    <h4>Historia y transformación</h4>
+                    <button onclick="openPlanModal('pablo')" data-plan="pablo">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-plan" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlanModal()">&times;</span>
+            <div class="main-image-container">
+                <img id="main-image" src="img/plan1.jpg">
+            </div>
+            <!-- Carrusel de miniaturas debajo -->
+            <div class="thumbnails">
+                <img src="img/a2.webp" onclick="changeMainImage(this.src)">
+                <img src="img/a6.webp" onclick="changeMainImage(this.src)">
+                <img src="img/a4.jpg" onclick="changeMainImage(this.src)">
+                <img src="img/a5.avif" onclick="changeMainImage(this.src)">
+                <img src="img/a7.jpeg" onclick="changeMainImage(this.src)">
+                <img src="img/a9.jpg" onclick="changeMainImage(this.src)">
+            </div>
+            <div class="right">
+                <div class="right-info">
+                    <h2>Traslados desde y hacia el Aeropuerto</h2>
+                    <p>Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="experiencias">
+        <h2>Experiencias</h2>
+        <!-- Fila de Fotos -->
+        <div class="carousel-row1">
+          <button class="nav prev" onclick="scrollCarousel('photos', -1)">&#10094;</button>
+          <div class="carousel1" id="photos">
+            <img src="img2/exp1.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp2.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp11.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp4.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp5.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp6.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp7.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp12.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp9.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp10.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp8.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp3.jpeg" onclick="openMediaModal(this.src)">
+            <img src="img2/exp13.jpeg" onclick="openMediaModal(this.src)">
+            <!-- Más imágenes -->
+          </div>
+          <button class="nav next" onclick="scrollCarousel('photos', 1)">&#10095;</button>
+        </div>
+      
+        <!-- Fila de Videos -->
+        <div class="carousel-row1">
+          <button class="nav prev" onclick="scrollCarousel('videos', -1)">&#10094;</button>
+          <div class="carousel1" id="videos">
+            <video src="vid/vid6.mp4" controls></video>
+            <video src="vid/vid4.mp4" controls></video>
+            <video src="vid/vid2.mp4" controls></video>
+            <video src="vid/vid7.mp4" controls></video>
+            <video src="vid/vid3.mp4" controls></video>
+            <video src="vid/vid1.mp4" controls></video>
+            <video src="vid/vid4.mp4" controls></video>
+            <video src="vid/vid5.mp4" controls></video>
+            <!-- Más videos -->
+          </div>
+          <button class="nav next" onclick="scrollCarousel('videos', 1)">&#10095;</button>
+        </div>
+    </section>
+      <!-- Modal -->
+    <div id="media-modal" class="modal1" onclick="closeMediaModal()">
+        <span class="close1">&times;</span>
+        <div class="modal-content1" id="modal-media-content"></div>
+    </div> 
+    <div class="contact">
+        <h1>¿Listo para explorar Medellín?</h1>
+        <p>Contáctanos para planear tu aventura</p>
+        <center><hr></center>
+        <div class="contact-col">
+            <div class="contact-info">
+                <ul>
+                <li><strong>Email:</strong> conocemedellinconfercho@gmail.com</li>
+                <li><strong>WhatsApp:</strong> +57 316 7510019</li>
+                <li><strong>Instagram:</strong> @conocemedellinconfercho</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="mailto:conocemedellinconfercho@gmail.com" target="_blank">
+                    <img src="img2/gmail-logo-app-icon-rounded-1-removebg-preview.png" alt="Gmail" class="icon-gmail">
+                </a>
+                <a href="https://www.instagram.com/conocemedellinconfercho" target="_blank">
+                    <img src="img2/Instagram.png" alt="Instagram" class="icon-instagram">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="img2/tiktok.webp" alt="TikTok" class="icon-tiktok">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Botón de WhatsApp flotante -->
+    <a href="https://wa.me/573167510019" target="_blank" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+        <img src="img2/WhatsApp.svg.webp" alt="WhatsApp" />
+    </a>      
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
+
+        function showNextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 5000);
+    
+        const planes = {
+        traslados: {
+            titulo: "Traslados desde y hacia el Aeropuerto",
+            descripcion: "Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!",
+            imagenes: ["img/a2.webp", "img/a4.jpg", "img/a5.avif", "img/a6.webp", "img/a7.jpeg", "img/a9.jpg"]
+        },
+        citytour: {
+            titulo: "City Tour Medellín",
+            descripcion: "Sumérgete en el corazón vibrante de Medellín con nuestro recorrido por los lugares más emblemáticos de la ciudad. Desde el arte urbano y la historia de transformación de <strong>la Comuna 13</strong>, hasta las impresionantes vistas desde <strong>el Metrocable de San Javier</strong>. Disfruta de la cultura paisa en <strong>el Pueblito Paisa</strong>, aprecia la grandeza de las esculturas en <strong>la Plaza Botero</strong> y vive la energía cosmopolita de <strong>Provenza</strong>, uno de los sectores más trendy de la ciudad. ¡Una experiencia completa!",
+            imagenes: ["img/city1.jpg", "img/city2.jpg", "img/city3.jpg", "img/city4.webp", "img/city5.webp", "img/city6.jpg", "img/city7.jpeg", "img/city8.jpg", "img/city9.jpg", "img/city10.jpg", "img/city11.webp", "img/city12.avif", "img/medefer1.jpeg"]
+        },
+        cafe: {
+            titulo: "Tour del Café",
+            descripcion: "Conéctate con la esencia de Colombia a través de uno de sus mayores tesoros: el café. En este tour vivirás el día a día de un campesino cafetero. Aprenderás a sembrar, cosechar y procesar el grano, y finalizarás la jornada catando los distintos tipos de café colombiano. Disfruta de un entorno natural, conversa con caficultores locales y llévate contigo una experiencia inolvidable. Ideal para los amantes del café y la cultura rural.",
+            imagenes: ["img/cafefer1.jpeg", "img/cafe2.jpg", "img/cafe3.webp", "img/cafefer2.jpeg", "img/cafe5.png", "img/cafefer4.jpeg"]
+        },
+        parapente: {
+            titulo: "Tour Parapente San Félix",
+            descripcion: "¡Atrévete a vivir una aventura única! Siente la adrenalina mientras sobrevuelas el majestuoso Valle de Aburrá en un vuelo en parapente desde San Félix, uno de los lugares más famosos de Colombia para practicar este deporte. Acompañado por instructores certificados, disfrutarás de una experiencia segura, emocionante y con vistas panorámicas que te dejarán sin aliento. ¡Una dosis de libertad y emoción!",
+            imagenes: ["img/para1.jpg", "img/para2.jpg", "img/para3.jpg", "img/para4.jpg", "img/para5.jpg"]
+        },
+        napoles: {
+            titulo: "Tour Hacienda Nápoles",
+            descripcion: "Explora el legado histórico y natural de la Hacienda Nápoles, la antigua propiedad de Pablo Escobar convertida hoy en un parque temático. Descubre su zoológico con especies exóticas, el museo, y relájate en el parque acuático con toboganes y piscinas para todas las edades. Ideal para familias, amigos y amantes de la aventura. ¡Un plan completo donde la historia, la naturaleza y la diversión se encuentran!",
+            imagenes: ["img/napo1.jpg", "img/napo2.jpg", "img/napo3.jpg", "img/napo4.jpg", "img/cafe5.webp", "img/napo6.jpg", "img/napo7.jpeg", "img/napo9.jpg", "img/napo10.jpeg", "img/napo11.jpg"]
+        },
+        oriente: {
+            titulo: "Tour Pueblos de Antioquia",
+            descripcion: "Embárcate en un viaje lleno de color, sabor y tradición. Conoce la riqueza cultural de los encantadores pueblos del oriente antioqueño: <strong>La Ceja</strong>, <strong>El Retiro</strong> y <strong>Llanogrande</strong>. Caminaremos por calles empedradas, visitaremos mercados tradicionales, probaremos platos típicos y descubriremos artesanías locales. Una experiencia perfecta para quienes buscan tranquilidad, cultura y gastronomía en medio de paisajes encantadores.",
+            imagenes: ["img/ori1.jpeg", "img/ori2.jpg", "img/ori3.jpg", "img/ori4.jpg", "img/ori5.jpg", "img/ori6.jpg", "img/ori7.jpg", "img/puefer1.jpeg", "img/puefer2.jpeg"]
+        },
+        pablo: {
+            titulo: "Tour Pablo Escobar",
+            descripcion: "Explora uno de los capítulos más controversiales y conocidos de la historia de Colombia a través de un recorrido por los lugares clave en la vida de Pablo Escobar: su antigua residencia, la tumba en el cementerio Montesacro, el barrio que ayudó a construir, entre otros. Este tour te permitirá comprender el impacto social, económico y cultural de su figura en Medellín. Más allá del mito popularizado por series y documentales, conocerás la realidad de una ciudad que ha sabido transformarse y renacer. Una experiencia de turismo consciente, enfocada en la memoria histórica y el aprendizaje.",
+            imagenes: ["img/pa1.jpg", "img/pa2.jpg", "img/pa3.jpg", "img/pa4.jpg", "img/pa5.jpg", "img/pacasa.jpeg"]
+        },
+        guata: {
+            titulo: "Tour Guatapé",
+            descripcion: "Vive una experiencia inolvidable en uno de los destinos más mágicos de Antioquia. Nuestro tour a Guatapé te lleva a disfrutar de la impresionante Piedra del Peñol, una de las formaciones rocosas más altas del mundo, con más de 700 escalones que conducen a una vista panorámica espectacular de la represa. Recorre las coloridas calles de Guatapé, un pueblo lleno de vida, arte y cultura. Además, disfruta de emocionantes actividades náuticas como paseos en lancha, motos acuáticas o botes por la represa, rodeado de paisajes naturales que te dejarán sin aliento. Una combinación perfecta de aventura, belleza natural y tradición paisa. ¡Ideal para quienes buscan desconectarse, tomar fotos increíbles y crear recuerdos para toda la vida!",
+            imagenes: ["img/guata1.webp", "img/Guatape2.jpg", "img/guata3.jpg", "img/guata7.jpeg", "img/guata8.jpg", "img/guata9.jpg", "img/guata10.webp"]
+        }
+        };
+
+        let images = [];
+        let currentImageIndex = 0;
+        let imageInterval;
+
+        function openPlanModal(planId) {
+            const modal = document.getElementById("modal-plan");
+            const data = planes[planId];
+
+            document.querySelector(".right-info h2").textContent = data.titulo;
+            document.querySelector(".right-info p").innerHTML = data.descripcion;
+
+            images = data.imagenes;
+            currentImageIndex = 0;
+
+            const mainImage = document.getElementById("main-image");
+            const thumbnails = document.querySelector(".thumbnails");
+            thumbnails.innerHTML = "";
+
+            images.forEach((src, index) => {
+            const thumb = document.createElement("img");
+            thumb.src = src;
+            thumb.onclick = () => {
+                currentImageIndex = index;
+                mainImage.src = images[currentImageIndex];
+                resetImageInterval();
+            };
+            thumbnails.appendChild(thumb);
+            });
+
+            mainImage.src = images[currentImageIndex];
+
+            modal.style.display = "flex";
+            startImageInterval();
+        }
+
+        function closePlanModal() {
+            document.getElementById("modal-plan").style.display = "none";
+            clearInterval(imageInterval);
+        }
+
+        function startImageInterval() {
+            imageInterval = setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById("main-image").src = images[currentImageIndex];
+            }, 3500); // Cambia cada 4 segundos
+        }
+
+        function resetImageInterval() {
+            clearInterval(imageInterval);
+            startImageInterval();
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal-plan");
+            if (event.target === modal) {
+            closePlanModal();
+            }
+        };
+        function openMediaModal(src) {
+            // Pausar todos los videos visibles
+            document.querySelectorAll('video').forEach(video => {
+                video.pause();
+                video.currentTime = 0; // Opcional: reinicia desde el inicio
+            });
+
+            // Detectar si es video o imagen
+            const modal = document.getElementById('media-modal');
+            const content = document.getElementById('modal-media-content');
+            const isVideo = src.endsWith('.mp4');
+
+            content.innerHTML = isVideo
+                ? `<video src="${src}" controls autoplay onclick="enterFullscreen(this)" style="max-width: 100%; max-height: 100%;"></video>`
+                : `<img src="${src}" alt="Experiencia">`;
+
+            modal.style.display = 'flex';
+        }
+        function closeMediaModal() {
+            document.getElementById('media-modal').style.display = 'none';
+            document.getElementById('modal-media-content').innerHTML = '';
+        }
+        function scrollCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            const scrollAmount = 29
+            0; // puedes ajustar este valor
+
+            carousel.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+        function enterFullscreen(videoElement) {
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile && videoElement.requestFullscreen) {
+            videoElement.requestFullscreen();
+        } else if (isMobile && videoElement.webkitEnterFullscreen) {
+            // Para iOS (Safari)
+            videoElement.webkitEnterFullscreen();
+        }
+        }   
+
+    </script>
+</body>
+</html>
