@@ -390,6 +390,11 @@ h2{
       width: 200px;
       height: 200px;
     }
+    .icon-facebook{
+      width: 120px;
+      height: 120px;
+      margin-left: 20px;
+    }
     
     /* Efecto hover suave */
     .social-media img:hover {
@@ -424,6 +429,160 @@ h2{
       margin: 20px 0;
       width: 60%;
     }
+    .reviews-section {
+      padding: 0px 20px;
+      background-color: #ff6701b9;
+      text-align: center;
+    }
+    .reviews-section .btn-review,
+    .reviews-section .btn-view-reviews {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 0.8rem;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .reviews-section .btn-review:hover,
+    .reviews-section .btn-view-reviews:hover {
+      background-color: #e65c00;
+      transform: scale(1.03);
+    } 
+/* Estilo base para todos los modales */
+.modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.modal-content2{
+  position: relative;
+}
+/* Contenido del modal */
+.modal3 form,
+.modal3 .modal-content3,
+.modal3 .success-message {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  height: 60%;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+.error-message {
+  background-color: #ffe0e0;
+  color: #c0392b;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Botón de cerrar si lo necesitas */
+.modal3 .close {
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #070707;
+}
+.modal-content3 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inputs del formulario */
+.modal3 input,
+.modal3 select,
+.modal3 textarea,
+.modal3 button {
+  width: 100%;
+  color: #333;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  margin-top: 8px;
+}
+.modal3 input{
+  margin-top: 30px;
+}
+#review-form h2 {
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.modal3 button {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal3 button:hover {
+  background-color: #27ae60;
+}
+
+/* Estilo para la lista de reseñas */
+#reviews-list {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-item {
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  transition: all 0.3s ease;
+}
+
+.review-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Animación suave de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   @media (max-width: 768px) {
 
     .overlay h1 {
@@ -563,8 +722,8 @@ h2{
     }
   
     .whatsapp-float img {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
     }
     .icon-gmail {
       width: 110px;
@@ -575,7 +734,11 @@ h2{
       width: 65px;
       height: 65px;
     }
-    
+    .icon-facebook{
+      width: 70px;
+      height: 70px;
+      margin-left: 20px;
+    }
     .icon-tiktok {
       width: 110px;
       height: 110px;
@@ -593,7 +756,49 @@ h2{
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
+      gap: 0.5rem;
+    }
+    .reviews-section .btn-review,
+    .reviews-section .btn-view-reviews {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    #review-form h2 {
+      margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+      text-align: center;
+    }
+    .modal3 .close {
+      position: absolute;
+      top: 0rem;
+      right: 1.3rem;
+      font-size: 3rem;
+      cursor: pointer;
+      color: #070707;
+    }
+    .modal3 {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
