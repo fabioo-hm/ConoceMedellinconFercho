@@ -345,8 +345,8 @@ h2{
     bottom: 25px;
     right: 15px;
     z-index: 3;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: #25D366;
     border-radius: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -361,8 +361,8 @@ h2{
     }
 
     .whatsapp-float img {
-    width: 72px;
-    height: 72px;/* Para hacer el ícono blanco si es negro */
+    width: 62px;
+    height: 62px;/* Para hacer el ícono blanco si es negro */
     }
     .social-media {
       display: flex;
@@ -377,22 +377,22 @@ h2{
     
     /* Tamaños personalizados */
     .icon-gmail {
-      width: 200px;
-      height: 150px;
+      width: 125px;
+      height: 95px;
     }
     
     .icon-instagram {
-      width: 110px;
-      height: 110px;
+      width: 70px;
+      height: 70px;
     }
     
     .icon-tiktok {
-      width: 200px;
-      height: 200px;
-    }
-    .icon-facebook{
       width: 120px;
       height: 120px;
+    }
+    .icon-facebook{
+      width: 80px;
+      height: 80px;
       margin-left: 20px;
     }
     
@@ -726,22 +726,22 @@ h2{
       height: 40px;
     }
     .icon-gmail {
-      width: 110px;
-      height: 85px;
+      width: 90px;
+      height: 65px;
     }
     
     .icon-instagram {
-      width: 65px;
-      height: 65px;
+      width: 45px;
+      height: 45px;
     }
     .icon-facebook{
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       margin-left: 20px;
     }
     .icon-tiktok {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
     }
     hr {
       border: 1px solid #363636;
@@ -805,18 +805,23 @@ h2{
   .contact-col {
     grid-template-columns: repeat(1, 1fr); /* Una sola columna */
   }
-  .icon-gmail {
-    width: 200px;
-    height: 150px;
-  }
-  
-  .icon-instagram {
-    width: 110px;
-    height: 110px;
-  }
-  
-  .icon-tiktok {
-    width: 200px;
-    height: 200px;
-  }
+    .icon-gmail {
+      width: 125px;
+      height: 95px;
+    }
+    
+    .icon-instagram {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .icon-tiktok {
+      width: 120px;
+      height: 120px;
+    }
+    .icon-facebook{
+      width: 80px;
+      height: 80px;
+      margin-left: 20px;
+    }
 }
