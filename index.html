@@ -4,396 +4,1204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Explora Medellín con los mejores tours guiados. Cultura, aventura y naturaleza en un solo lugar.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <link rel="stylesheet" href="style.css" />
   <title>Tours en Medellín con Fercho | Guías Locales, Experiencias Únicas y Personalizadas</title>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <div class="logo">Medellín<span>ConFercho</span></div>
+      <div class="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#tours">Tours</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#reseñas">Reseñas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header/Hero -->
+  <header id="home">
     <div class="slider">
-        <div class="slide active" style="background-image: url('img/GI-1155850682-El-Penol.jpg');"></div>
-        <div class="slide" style="background-image: url('img/MedellADn-foto-ProColombia.webp');"></div>
-        <div class="slide" style="background-image: url('img/68850-Botero-Sculpture-Park.webp');"></div>
-        <div class="slide" style="background-image: url('img/XAA7V7QQHRHR5DN7JQ7BEA3R6Q.jpg');"></div>
-        <div class="slide" style="background-image: url('img/P4212386_opt.jpg');"></div>
-        <div class="overlay">
-            <h3>Conoce Medellín con Fercho</h3>
-            <h1>La ciudad de la eterna primavera</h1>
-            <button onclick="document.getElementById('destino').scrollIntoView()">Vamos</button>
+      <div class="slide active" style="background-image: url('img/GI-1155850682-El-Penol.jpg');"></div>
+      <div class="slide" style="background-image: url('img/MedellADn-foto-ProColombia.webp');"></div>
+      <div class="slide" style="background-image: url('img/68850-Botero-Sculpture-Park.webp');"></div>
+      <div class="slide" style="background-image: url('img/XAA7V7QQHRHR5DN7JQ7BEA3R6Q.jpg');"></div>
+      <div class="slide" style="background-image: url('img/P4212386_opt.jpg');"></div>
+      <div class="slide-overlay">
+        <div class="hero-content">
+          <h3>Conoce Medellín con Fercho</h3>
+          <h1>La ciudad de la eterna primavera</h1>
+          <p>Descubre los rincones más auténticos de Medellín con un guía local. Cultura, aventura, gastronomía y mucho más.</p>
+          <a href="#tours" class="btn">Explorar Tours</a>
         </div>
+      </div>
     </div>
-    <div id="destino">
-        <h2>Nuestros Planes para Conocer Medellín</h2>
-        <div class="plan-container">
-            <div class="plan">
-                <img src="img/plan1.jpg">
-                <div class="plan-info">
-                    <h3>Traslados desde y hacia el Aeropuerto</h3>
-                    <button onclick="openPlanModal('traslados')" data-plan="traslados">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan2.jpg">
-                <div class="plan-info">
-                    <h3>City Tour Medellín</h3>
-                    <h4>Lo mejor de la ciudad</h4>
-                    <button onclick="openPlanModal('citytour')" data-plan="citytour">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan3.jpg">
-                <div class="plan-info">
-                    <h3>Tour del Café</h3>
-                    <h4>Una experiencia auténtica</h4>
-                    <button onclick="openPlanModal('cafe')" data-plan="cafe">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan4.jpg">
-                <div class="plan-info">
-                    <h3>Tour Parapente San Félix</h3>
-                    <h4>Vuela sobre el valle</h4>
-                    <button onclick="openPlanModal('parapente')" data-plan="parapente">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/guata.jpg">
-                <div class="plan-info">
-                    <h3>Tour Guatapé</h3>
-                    <h4>Altura, color y adrenalina</h4>
-                    <button onclick="openPlanModal('guata')" data-plan="guata">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan5.jpg">
-                <div class="plan-info">
-                    <h3>Tour Hacienda Nápoles</h3>
-                    <h4>Naturaleza y aventura</h4>
-                    <button onclick="openPlanModal('napoles')" data-plan="napoles">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan6.jpg">
-                <div class="plan-info">
-                    <h3>Tour Pueblos de Antioquia</h3>
-                    <h4>Cultura y tradición</h4>
-                    <button onclick="openPlanModal('oriente')" data-plan="oriente">Ver más</button>
-                </div>
-            </div>
-            <div class="plan">
-                <img src="img/plan7.jpg">
-                <div class="plan-info">
-                    <h3>Tour Pablo Escobar</h3>
-                    <h4>Historia y transformación</h4>
-                    <button onclick="openPlanModal('pablo')" data-plan="pablo">Ver más</button>
-                </div>
-            </div>
-        </div>
+    <div class="slider-indicators">
+      <div class="indicator active"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
     </div>
-    <div id="modal-plan" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closePlanModal()">&times;</span>
-            <div class="main-image-container">
-                <img id="main-image" src="img/plan1.jpg">
-            </div>
-            <!-- Carrusel de miniaturas debajo -->
-            <div class="thumbnails">
-                <img src="img/a2.webp" onclick="changeMainImage(this.src)">
-                <img src="img/a6.webp" onclick="changeMainImage(this.src)">
-                <img src="img/a4.jpg" onclick="changeMainImage(this.src)">
-                <img src="img/a5.avif" onclick="changeMainImage(this.src)">
-                <img src="img/a7.jpeg" onclick="changeMainImage(this.src)">
-                <img src="img/a9.jpg" onclick="changeMainImage(this.src)">
-            </div>
-            <div class="right">
-                <div class="right-info">
-                    <h2>Traslados desde y hacia el Aeropuerto</h2>
-                    <p>Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="experiencias">
-        <h2>Experiencias</h2>
-        <!-- Fila de Fotos -->
-        <div class="carousel-row1">
-          <button class="nav prev" onclick="scrollCarousel('photos', -1)">&#10094;</button>
-          <div class="carousel1" id="photos">
-            <img src="img2/exp1.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp2.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp11.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp4.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp5.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp6.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp12.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp9.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp10.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp8.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp3.jpeg" onclick="openMediaModal(this.src)">
-            <img src="img2/exp13.jpeg" onclick="openMediaModal(this.src)">
-            <!-- Más imágenes -->
-          </div>
-          <button class="nav next" onclick="scrollCarousel('photos', 1)">&#10095;</button>
-        </div>
-      
-        <!-- Fila de Videos -->
-        <div class="carousel-row1">
-          <button class="nav prev" onclick="scrollCarousel('videos', -1)">&#10094;</button>
-          <div class="carousel1" id="videos">
-            <video src="vid/vid6.mp4" controls></video>
-            <video src="vid/vid4.mp4" controls></video>
-            <video src="vid/vid2.mp4" controls></video>
-            <video src="vid/vid7.mp4" controls></video>
-            <video src="vid/vid3.mp4" controls></video>
-            <video src="vid/vid1.mp4" controls></video>
-            <video src="vid/vid5.mp4" controls></video>
-            <!-- Más videos -->
-          </div>
-          <button class="nav next" onclick="scrollCarousel('videos', 1)">&#10095;</button>
-        </div>
-    </section>
-      <!-- Modal -->
-    <div id="media-modal" class="modal1" onclick="closeMediaModal()">
-        <span class="close1">&times;</span>
-        <div class="modal-content1" id="modal-media-content"></div>
-    </div> 
-    <section class="reviews-section">
-        <button class="btn-review" onclick="document.getElementById('modal3').style.display='flex'">
-          Califica tu experiencia
-        </button>
-        <button class="btn-view-reviews" onclick="openViewReviewsModal()">
-          Ver opiniones
-        </button>
-      
-        <!-- Modal de Calificación (único formulario) -->
-        <div id="modal3" class="modal3">
-            <div class="modal-content2">
-                <span class="close" onclick="document.getElementById('modal3').style.display='none'">&times;</span>
-                <form id="review-form">
-                    <h2>Califica tu experiencia</h2>
-                    <input type="text" id="nombre" placeholder="Tu nombre" required />
-                    <select id="estrellas" required>
-                    <option value="">Selecciona una calificación</option>
-                    <option value="5">⭐⭐⭐⭐⭐</option>
-                    <option value="4">⭐⭐⭐⭐</option>
-                    <option value="3">⭐⭐⭐</option>
-                    <option value="2">⭐⭐</option>
-                    <option value="1">⭐</option>
-                    </select>
-                    <textarea id="comentario" placeholder="Cuentamos sobre tu experiencia..." required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-        <!-- Modal para ver reseñas -->
-        <div id="view-reviews-modal" class="modal3">
-            <div class="modal-content3"> <!-- Asegúrate de usar esta clase -->
-              <span class="close" onclick="closeViewReviewsModal()">&times;</span>
-              <div id="reviews-list"></div>
-            </div>
-          </div>
-        <!-- Modal de éxito (si decides usarlo) -->
-        <div id="success-modal" class="modal3" style="display: none;">
-            <div class="success-message">
-                <p>✅ ¡Gracias por tu opinión!</p>
-            </div>
-        </div>
-        <div id="error-modal" class="modal3" style="display: none;">
-            <div class="error-message">
-                <p>❌ Ocurrió un error. Intenta de nuevo.</p>
-            </div>
-        </div>     
-    </section>            
-    <div class="contact">
-        <h1>¿Listo para explorar Medellín?</h1>
-        <p>Contáctanos para planear tu aventura</p>
-        <center><hr></center>
-        <div class="contact-col">
-            <div class="contact-info">
-                <ul>
-                <li><strong>Email:</strong> conocemedellinconfercho@gmail.com</li>
-                <li><strong>WhatsApp:</strong> +57 316 7510019</li>
-                <li><strong>Instagram:</strong> @conocemedellinconfercho</li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <a href="mailto:conocemedellinconfercho@gmail.com" target="_blank">
-                    <img src="img2/gmail-logo-app-icon-rounded-1-removebg-preview.png" alt="Gmail" class="icon-gmail">
-                </a>
-                <a href="https://www.instagram.com/conocemedellinconfercho" target="_blank">
-                    <img src="img2/Instagram.png" alt="Instagram" class="icon-instagram">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61575789183393" target="_blank">
-                    <img src="img2/facebook.png" alt="Facebook" class="icon-facebook">
-                <a href="https://www.tiktok.com/@medellin.con.fercho?_t=ZS-8vyuvPcX9Ud&_r=1" target="_blank">
-                    <img src="img2/tiktok.webp" alt="TikTok" class="icon-tiktok">
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Botón de WhatsApp flotante -->
-    <a href="https://wa.me/573167510019" target="_blank" class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
-        <img src="img2/WhatsApp.svg.webp" alt="WhatsApp" />
-    </a>      
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        let current = 0;
+  </header>
 
-        function showNextSlide() {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
+  <!-- Tours Section -->
+  <section id="tours" class="plans-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestros Tours en Medellín</h2>
+        <p>Elige la experiencia que más se adapte a tus intereses</p>
+      </div>
+      <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan1.jpg" alt="Traslados Aeropuerto">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-shuttle-van"></i>
+            </div>
+            <h3>Traslados Aeropuerto</h3>
+            <p>Servicio puerta a puerta desde y hacia el aeropuerto</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Vehículos cómodos y seguros</li>
+              <li><i class="fas fa-check"></i> Puntualidad garantizada</li>
+              <li><i class="fas fa-check"></i> Asistencia personalizada</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('traslados')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan2.jpg" alt="City Tour Medellín">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-city"></i>
+            </div>
+            <h3>City Tour Medellín</h3>
+            <p>Descubre lo mejor de la ciudad en un recorrido completo</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Comuna 13 y sus grafitis</li>
+              <li><i class="fas fa-check"></i> Plaza Botero</li>
+              <li><i class="fas fa-check"></i> Pueblito Paisa</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('citytour')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan3.jpg" alt="Tour del Café">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-coffee"></i>
+            </div>
+            <h3>Tour del Café</h3>
+            <p>Vive la experiencia cafetera desde la siembra hasta la taza</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Finca cafetera tradicional</li>
+              <li><i class="fas fa-check"></i> Proceso de cultivo y cosecha</li>
+              <li><i class="fas fa-check"></i> Cata de cafés especiales</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('cafe')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 4 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan4.jpg" alt="Tour Parapente">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-parachute-box"></i>
+            </div>
+            <h3>Tour Parapente</h3>
+            <p>Vuela sobre el valle de Aburrá con instructores certificados</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Vuelo de 15-20 minutos</li>
+              <li><i class="fas fa-check"></i> Vistas panorámicas increíbles</li>
+              <li><i class="fas fa-check"></i> Fotos y videos incluidos</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('parapente')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 5 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/guata.jpg" alt="Tour Guatapé">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <h3>Tour Guatapé</h3>
+            <p>Explora la Piedra del Peñol y el pueblo colorido de Guatapé</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Subida a la Piedra del Peñol</li>
+              <li><i class="fas fa-check"></i> Recorrido por Guatapé</li>
+              <li><i class="fas fa-check"></i> Paseo en lancha por el embalse</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('guata')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 6 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan5.jpg" alt="Tour Hacienda Nápoles">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-hippo"></i>
+            </div>
+            <h3>Hacienda Nápoles</h3>
+            <p>Parque temático con zoológico y actividades acuáticas</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Zoológico con especies exóticas</li>
+              <li><i class="fas fa-check"></i> Parque acuático</li>
+              <li><i class="fas fa-check"></i> Museo histórico</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('napoles')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 7 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan6.jpg" alt="Tour Pueblos Antioquia">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Pueblos Antioquia</h3>
+            <p>Conoce la riqueza cultural de los pueblos del oriente antioqueño</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> La Ceja, El Retiro y Llanogrande</li>
+              <li><i class="fas fa-check"></i> Arquitectura colonial</li>
+              <li><i class="fas fa-check"></i> Gastronomía tradicional</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('oriente')">Ver Detalles</button>
+          </div>
+        </div>
+
+        <!-- Plan 8 -->
+        <div class="plan-card">
+          <div class="plan-image">
+            <img src="img/plan7.jpg" alt="Tour Pablo Escobar">
+          </div>
+          <div class="plan-content">
+            <div class="plan-icon">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3>Tour Histórico</h3>
+            <p>Conoce la historia y transformación de Medellín</p>
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> Lugares emblemáticos</li>
+              <li><i class="fas fa-check"></i> Enfoque en transformación social</li>
+              <li><i class="fas fa-check"></i> Guía especializado</li>
+            </ul>
+            <button class="btn" onclick="openPlanModal('pablo')">Ver Detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para planes -->
+  <div id="plan-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closePlanModal()">&times;</span>
+      <div class="modal-gallery">
+        <div class="modal-image-container">
+          <img id="modal-main-image" class="modal-main-image" src="img/plan1.jpg" alt="Tour">
+          <div class="modal-nav modal-prev" onclick="changeImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="modal-nav modal-next" onclick="changeImage(1)">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+        <div class="modal-thumbnails" id="modal-thumbnails">
+          <!-- Thumbnails will be inserted here by JavaScript -->
+        </div>
+      </div>
+      <div class="modal-info">
+        <h2 id="modal-title">Traslados desde y hacia el Aeropuerto</h2>
+        <div class="modal-meta">
+          <div><i class="fas fa-clock"></i> <span id="modal-duration">30-45 min</span></div>
+          <div><i class="fas fa-users"></i> <span id="modal-group">1-4 personas</span></div>
+          <div><i class="fas fa-map-marker-alt"></i> <span id="modal-location">Aeropuerto José María Córdova</span></div>
+        </div>
+        <div class="modal-description" id="modal-description">
+          Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!
+        </div>
+        <div class="modal-features">
+          <h3>Lo que incluye:</h3>
+          <ul id="modal-features-list">
+            <!-- Features will be inserted here by JavaScript -->
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <button class="btn" onclick="contactWhatsApp()">Reservar Ahora</button>
+          <button class="btn btn-secondary" onclick="closePlanModal()">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experiencias Section -->
+  <section id="experiencias" class="experiences-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experiencias de Nuestros Viajeros</h2>
+        <p>Momentos únicos capturados en fotos y videos</p>
+      </div>
+
+      <!-- Fotos -->
+      <div class="carousel-container">
+        <h3 class="carousel-title">Galería de Fotos</h3>
+        <div class="carousel-nav carousel-prev" onclick="scrollCarousel('photos-carousel', -1)">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="carousel" id="photos-carousel">
+          <div class="carousel-item" onclick="openMediaModal('img2/exp1.jpeg', 'image')">
+            <img src="img2/exp1.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp2.jpeg', 'image')">
+            <img src="img2/exp2.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp11.jpeg', 'image')">
+            <img src="img2/exp11.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp4.jpeg', 'image')">
+            <img src="img2/exp4.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp5.jpeg', 'image')">
+            <img src="img2/exp5.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp6.jpeg', 'image')">
+            <img src="img2/exp6.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp12.jpeg', 'image')">
+            <img src="img2/exp12.jpeg" alt="Experiencia Medellín">
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('img2/exp9.jpeg', 'image')">
+            <img src="img2/exp9.jpeg" alt="Experiencia Medellín">
+          </div>
+        </div>
+        <div class="carousel-nav carousel-next" onclick="scrollCarousel('photos-carousel', 1)">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <!-- Videos -->
+      <div class="carousel-container">
+        <h3 class="carousel-title">Videos de Experiencias</h3>
+        <div class="carousel-nav carousel-prev" onclick="scrollCarousel('videos-carousel', -1)">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="carousel" id="videos-carousel">
+          <div class="carousel-item" onclick="openMediaModal('vid/vid6.mp4', 'video')">
+            <video src="vid/vid6.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid4.mp4', 'video')">
+            <video src="vid/vid4.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid2.mp4', 'video')">
+            <video src="vid/vid2.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid7.mp4', 'video')">
+            <video src="vid/vid7.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid3.mp4', 'video')">
+            <video src="vid/vid3.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid1.mp4', 'video')">
+            <video src="vid/vid1.mp4" muted></video>
+          </div>
+          <div class="carousel-item" onclick="openMediaModal('vid/vid5.mp4', 'video')">
+            <video src="vid/vid5.mp4" muted></video>
+          </div>
+        </div>
+        <div class="carousel-nav carousel-next" onclick="scrollCarousel('videos-carousel', 1)">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para medios - CORREGIDO -->
+  <div id="media-modal" class="modal">
+    <div class="media-modal-content">
+      <span class="modal-close" onclick="closeMediaModal()">&times;</span>
+      <div class="media-container" id="modal-media-content">
+        <!-- Media content will be inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Reseñas Section -->
+  <section id="reseñas" class="reviews-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Opiniones de Nuestros Viajeros</h2>
+        <p>Descubre lo que dicen quienes ya han vivido la experiencia</p>
+      </div>
+
+      <div class="reviews-actions">
+        <button class="btn" onclick="openReviewModal()">Dejar Reseña</button>
+        <button class="btn btn-secondary" onclick="openAllReviewsModal()">Ver Todas las Reseñas</button>
+      </div>
+
+      <div class="reviews-grid" id="featured-reviews">
+        <!-- Las reseñas destacadas se cargarán aquí -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para enviar reseñas -->
+  <div id="review-modal" class="modal">
+    <div class="review-modal-content">
+      <span class="modal-close" onclick="closeReviewModal()">&times;</span>
+      <h2>Califica tu Experiencia</h2>
+      <form id="review-form">
+        <div class="review-form-group">
+          <label for="review-name">Tu Nombre</label>
+          <input type="text" id="review-name" required>
+        </div>
+        <div class="review-form-group">
+          <label>Calificación</label>
+          <div class="star-rating" id="star-rating">
+            <i class="far fa-star" data-rating="1"></i>
+            <i class="far fa-star" data-rating="2"></i>
+            <i class="far fa-star" data-rating="3"></i>
+            <i class="far fa-star" data-rating="4"></i>
+            <i class="far fa-star" data-rating="5"></i>
+          </div>
+          <input type="hidden" id="review-rating" required>
+        </div>
+        <div class="review-form-group">
+          <label for="review-comment">Tu Experiencia</label>
+          <textarea id="review-comment" placeholder="Cuéntanos sobre tu experiencia..." required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Enviar Reseña</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para ver todas las reseñas -->
+  <div id="all-reviews-modal" class="modal">
+    <div class="review-modal-content">
+      <span class="modal-close" onclick="closeAllReviewsModal()">&times;</span>
+      <h2>Todas las Opiniones</h2>
+      <div class="reviews-list-container" id="all-reviews-list">
+        <!-- Las reseñas se cargarán aquí -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contáctanos</h2>
+        <p>¿Listo para explorar Medellín? Estamos aquí para ayudarte</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Planifica tu Aventura</h3>
+          <p>Contáctanos para reservar tu tour o resolver cualquier duda. Estamos disponibles para hacer de tu visita a Medellín una experiencia inolvidable.</p>
+          
+          <ul class="contact-details">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>conocemedellinconfercho@gmail.com</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+57 316 7510019</span>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Medellín, Antioquia, Colombia</span>
+            </li>
+          </ul>
+
+          <h4>Síguenos en redes sociales</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/conocemedellinconfercho" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61575789183393" class="social-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@medellin.con.fercho?_t=ZS-8vyuvPcX9Ud&_r=1" class="social-link" target="_blank">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="mailto:conocemedellinconfercho@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Nombre Completo</label>
+              <input type="text" id="contact-name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Correo Electrónico</label>
+              <input type="email" id="contact-email" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Teléfono (Opcional)</label>
+              <input type="tel" id="contact-phone">
+            </div>
+            <div class="form-group">
+              <label for="contact-tour">Tour de Interés</label>
+              <select id="contact-tour">
+                <option value="">Selecciona un tour</option>
+                <option value="traslados">Traslados Aeropuerto</option>
+                <option value="citytour">City Tour Medellín</option>
+                <option value="cafe">Tour del Café</option>
+                <option value="parapente">Tour Parapente</option>
+                <option value="guata">Tour Guatapé</option>
+                <option value="napoles">Hacienda Nápoles</option>
+                <option value="oriente">Pueblos Antioquia</option>
+                <option value="pablo">Tour Histórico</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Mensaje</label>
+              <textarea id="contact-message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>MedellínConFercho</h4>
+          <p>Tu guía local para descubrir los rincones más auténticos de Medellín y sus alrededores.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Tours Populares</h4>
+          <ul class="footer-links">
+            <li><a href="#tours">City Tour Medellín</a></li>
+            <li><a href="#tours">Tour Guatapé</a></li>
+            <li><a href="#tours">Tour del Café</a></li>
+            <li><a href="#tours">Tour Parapente</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:conocemedellinconfercho@gmail.com">conocemedellinconfercho@gmail.com</a></li>
+            <li><a href="tel:+573167510019">+57 316 7510019</a></li>
+            <li><a href="https://wa.me/573167510019" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 MedellínConFercho. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/573167510019" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <img src="img2/WhatsApp.svg.webp" alt="WhatsApp">
+  </a>
+
+  <!-- Back to Top -->
+  <div class="back-to-top" id="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, orderBy, query, limit } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // Configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-ALyFNiNeUNnKK2MpzSTCfKrnkMjnU_Q",
+      authDomain: "conoce-medellin-con-fercho.firebaseapp.com",
+      projectId: "conoce-medellin-con-fercho",
+      storageBucket: "conoce-medellin-con-fercho.firebasestorage.app",
+      messagingSenderId: "525813230088",
+      appId: "1:525813230088:web:aeb79969ea03358305ffbd"
+    };
+
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Guardar reseña en Firestore
+    document.getElementById('review-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('review-name').value.trim();
+      const rating = parseInt(document.getElementById('review-rating').value);
+      const comment = document.getElementById('review-comment').value.trim();
+
+      // Todos los campos son obligatorios
+      if (!name || !rating || !comment) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Por favor completa todos los campos',
+          confirmButtonText: 'Aceptar'
+        });
+        return;
+      }
+
+      try {
+        await addDoc(collection(db, "reseñas"), {
+          name,
+          rating,
+          comment,
+          date: new Date()
+        });
+
+        // Limpiar formulario y cerrar modal
+        document.getElementById('review-form').reset();
+        closeReviewModal();
+
+        // Mostrar mensaje de éxito con SweetAlert2
+        Swal.fire({
+          icon: 'success',
+          title: '¡Gracias por tu calificación!',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+
+        // Recargar las reseñas
+        loadFeaturedReviews();
+      } catch (error) {
+        console.error("Error al guardar la reseña: ", error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Ocurrió un error al guardar tu reseña. Inténtalo de nuevo.',
+          confirmButtonText: 'Aceptar'
+        });
+      }
+    });
+
+    // Cargar reseñas destacadas (las 3 más recientes)
+    async function loadFeaturedReviews() {
+      const contenedor = document.getElementById('featured-reviews');
+      contenedor.innerHTML = "<p>Cargando reseñas...</p>";
+
+      try {
+        const q = query(collection(db, "reseñas"), orderBy("date", "desc"), limit(3));
+        const querySnapshot = await getDocs(q);
+        contenedor.innerHTML = "";
+
+        if (querySnapshot.empty) {
+          contenedor.innerHTML = "<p>No hay opiniones aún. ¡Sé el primero en opinar!</p>";
+          return;
         }
 
-        setInterval(showNextSlide, 5000);
-    
-        const planes = {
-        traslados: {
-            titulo: "Traslados desde y hacia el Aeropuerto",
-            descripcion: "Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!",
-            imagenes: ["img/a2.webp", "img/a4.jpg", "img/a5.avif", "img/a6.webp", "img/a7.jpeg", "img/a9.jpg"]
-        },
-        citytour: {
-            titulo: "City Tour Medellín",
-            descripcion: "Sumérgete en el corazón vibrante de Medellín con nuestro recorrido por los lugares más emblemáticos de la ciudad. Desde el arte urbano y la historia de transformación de <strong>la Comuna 13</strong>, hasta las impresionantes vistas desde <strong>el Metrocable de San Javier</strong>. Disfruta de la cultura paisa en <strong>el Pueblito Paisa</strong>, aprecia la grandeza de las esculturas en <strong>la Plaza Botero</strong> y vive la energía cosmopolita de <strong>Provenza</strong>, uno de los sectores más trendy de la ciudad. ¡Una experiencia completa!",
-            imagenes: ["img/city1.jpg", "img/city2.jpg", "img/city3.jpg", "img/city4.webp", "img/city5.webp", "img/city6.jpg", "img/city7.jpeg", "img/city8.jpg", "img/city9.jpg", "img/city10.jpg", "img/city11.webp", "img/city12.avif", "img/medefer1.jpeg"]
-        },
-        cafe: {
-            titulo: "Tour del Café",
-            descripcion: "Conéctate con la esencia de Colombia a través de uno de sus mayores tesoros: el café. En este tour vivirás el día a día de un campesino cafetero. Aprenderás a sembrar, cosechar y procesar el grano, y finalizarás la jornada catando los distintos tipos de café colombiano. Disfruta de un entorno natural, conversa con caficultores locales y llévate contigo una experiencia inolvidable. Ideal para los amantes del café y la cultura rural.",
-            imagenes: ["img/cafefer1.jpeg", "img/cafe2.jpg", "img/cafe3.webp", "img/cafefer2.jpeg", "img/cafe5.png", "img/cafefer4.jpeg"]
-        },
-        parapente: {
-            titulo: "Tour Parapente San Félix",
-            descripcion: "¡Atrévete a vivir una aventura única! Siente la adrenalina mientras sobrevuelas el majestuoso Valle de Aburrá en un vuelo en parapente desde San Félix, uno de los lugares más famosos de Colombia para practicar este deporte. Acompañado por instructores certificados, disfrutarás de una experiencia segura, emocionante y con vistas panorámicas que te dejarán sin aliento. ¡Una dosis de libertad y emoción!",
-            imagenes: ["img/para1.jpg", "img/para2.jpg", "img/para3.jpg", "img/para4.jpg", "img/para5.jpg"]
-        },
-        napoles: {
-            titulo: "Tour Hacienda Nápoles",
-            descripcion: "Explora el legado histórico y natural de la Hacienda Nápoles, la antigua propiedad de Pablo Escobar convertida hoy en un parque temático. Descubre su zoológico con especies exóticas, el museo, y relájate en el parque acuático con toboganes y piscinas para todas las edades. Ideal para familias, amigos y amantes de la aventura. ¡Un plan completo donde la historia, la naturaleza y la diversión se encuentran!",
-            imagenes: ["img/napo1.jpg", "img/napo2.jpg", "img/napo3.jpg", "img/napo4.jpg", "img/cafe5.webp", "img/napo6.jpg", "img/napo7.jpeg", "img/napo9.jpg", "img/napo10.jpeg", "img/napo11.jpg"]
-        },
-        oriente: {
-            titulo: "Tour Pueblos de Antioquia",
-            descripcion: "Embárcate en un viaje lleno de color, sabor y tradición. Conoce la riqueza cultural de los encantadores pueblos del oriente antioqueño: <strong>La Ceja</strong>, <strong>El Retiro</strong> y <strong>Llanogrande</strong>. Caminaremos por calles empedradas, visitaremos mercados tradicionales, probaremos platos típicos y descubriremos artesanías locales. Una experiencia perfecta para quienes buscan tranquilidad, cultura y gastronomía en medio de paisajes encantadores.",
-            imagenes: ["img/ori1.jpeg", "img/ori2.jpg", "img/ori3.jpg", "img/ori4.jpg", "img/ori5.jpg", "img/ori6.jpg", "img/ori7.jpg", "img/puefer1.jpeg", "img/puefer2.jpeg"]
-        },
-        pablo: {
-            titulo: "Tour Pablo Escobar",
-            descripcion: "Explora uno de los capítulos más controversiales y conocidos de la historia de Colombia a través de un recorrido por los lugares clave en la vida de Pablo Escobar: su antigua residencia, la tumba en el cementerio Montesacro, el barrio que ayudó a construir, entre otros. Este tour te permitirá comprender el impacto social, económico y cultural de su figura en Medellín. Más allá del mito popularizado por series y documentales, conocerás la realidad de una ciudad que ha sabido transformarse y renacer. Una experiencia de turismo consciente, enfocada en la memoria histórica y el aprendizaje.",
-            imagenes: ["img/pa1.jpg", "img/pa2.jpg", "img/pa3.jpg", "img/pa4.jpg", "img/pa5.jpg", "img/pacasa.jpeg"]
-        },
-        guata: {
-            titulo: "Tour Guatapé",
-            descripcion: "Vive una experiencia inolvidable en uno de los destinos más mágicos de Antioquia. Nuestro tour a Guatapé te lleva a disfrutar de la impresionante Piedra del Peñol, una de las formaciones rocosas más altas del mundo, con más de 700 escalones que conducen a una vista panorámica espectacular de la represa. Recorre las coloridas calles de Guatapé, un pueblo lleno de vida, arte y cultura. Además, disfruta de emocionantes actividades náuticas como paseos en lancha, motos acuáticas o botes por la represa, rodeado de paisajes naturales que te dejarán sin aliento. Una combinación perfecta de aventura, belleza natural y tradición paisa. ¡Ideal para quienes buscan desconectarse, tomar fotos increíbles y crear recuerdos para toda la vida!",
-            imagenes: ["img/guata1.webp", "img/Guatape2.jpg", "img/guata3.jpg", "img/guata7.jpeg", "img/guata8.jpg", "img/guata9.jpg", "img/guata10.webp"]
+        querySnapshot.forEach(doc => {
+          const data = doc.data();
+          const date = data.date.toDate();
+          const formattedDate = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+          
+          const stars = "⭐".repeat(data.rating) + "☆".repeat(5 - data.rating);
+          
+          const reviewCard = document.createElement('div');
+          reviewCard.className = 'review-card';
+          reviewCard.innerHTML = `
+            <div class="review-header">
+              <div class="reviewer">${data.name}</div>
+              <div class="review-stars">${stars}</div>
+            </div>
+            <div class="review-date">${formattedDate}</div>
+            <div class="review-text">${data.comment}</div>
+          `;
+          
+          contenedor.appendChild(reviewCard);
+        });
+      } catch (error) {
+        console.error("Error al cargar las reseñas: ", error);
+        contenedor.innerHTML = "<p>Error al cargar las reseñas.</p>";
+      }
+    }
+
+    // Cargar todas las reseñas para el modal
+    async function loadAllReviews() {
+      const contenedor = document.getElementById('all-reviews-list');
+      contenedor.innerHTML = "<p>Cargando reseñas...</p>";
+
+      try {
+        const q = query(collection(db, "reseñas"), orderBy("date", "desc"));
+        const querySnapshot = await getDocs(q);
+        contenedor.innerHTML = "";
+
+        if (querySnapshot.empty) {
+          contenedor.innerHTML = "<p>No hay opiniones aún. ¡Sé el primero en opinar!</p>";
+          return;
         }
-        };
 
-        let images = [];
-        let currentImageIndex = 0;
-        let imageInterval;
+        querySnapshot.forEach(doc => {
+          const data = doc.data();
+          const date = data.date.toDate();
+          const formattedDate = date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+          
+          const stars = "⭐".repeat(data.rating) + "☆".repeat(5 - data.rating);
+          
+          const reviewItem = document.createElement('div');
+          reviewItem.className = 'review-item';
+          reviewItem.innerHTML = `
+            <h3>${data.name}</h3>
+            <div class="stars">${stars}</div>
+            <div class="date">${formattedDate}</div>
+            <p>${data.comment}</p>
+          `;
+          
+          contenedor.appendChild(reviewItem);
+        });
+      } catch (error) {
+        console.error("Error al cargar las reseñas: ", error);
+        contenedor.innerHTML = "<p>Error al cargar las reseñas.</p>";
+      }
+    }
 
-        function openPlanModal(planId) {
-            const modal = document.getElementById("modal-plan");
-            const data = planes[planId];
+    // Hacer las funciones disponibles globalmente
+    window.loadFeaturedReviews = loadFeaturedReviews;
+    window.loadAllReviews = loadAllReviews;
+  </script>
 
-            document.querySelector(".right-info h2").textContent = data.titulo;
-            document.querySelector(".right-info p").innerHTML = data.descripcion;
+  <script>
+    // Datos de los planes
+    const planes = {
+      traslados: {
+        titulo: "Traslados desde y hacia el Aeropuerto",
+        descripcion: "Comienza tu aventura en Medellín con comodidad y tranquilidad. Ofrecemos un servicio de transporte especial desde y hacia el Aeropuerto Internacional José María Córdova. Nuestra puntualidad y conocimiento de la ciudad garantizan un traslado seguro, cómodo y sin complicaciones. ¡Olvídate del estrés y déjanos encargarnos de tu llegada o regreso!",
+        duracion: "30-45 min",
+        grupo: "1-4 personas",
+        ubicacion: "Aeropuerto José María Córdova",
+        caracteristicas: [
+          "Vehículos cómodos y seguros",
+          "Puntualidad garantizada",
+          "Asistencia personalizada",
+          "Conductor experimentado",
+          "Recogida y entrega puerta a puerta"
+        ],
+        imagenes: ["img/a2.webp", "img/a4.jpg", "img/a5.avif", "img/a6.webp", "img/a7.jpeg", "img/a9.jpg"]
+      },
+      citytour: {
+        titulo: "City Tour Medellín",
+        descripcion: "Sumérgete en el corazón vibrante de Medellín con nuestro recorrido por los lugares más emblemáticos de la ciudad. Desde el arte urbano y la historia de transformación de la Comuna 13, hasta las impresionantes vistas desde el Metrocable de San Javier. Disfruta de la cultura paisa en el Pueblito Paisa, aprecia la grandeza de las esculturas en la Plaza Botero y vive la energía cosmopolita de Provenza, uno de los sectores más trendy de la ciudad. ¡Una experiencia completa!",
+        duracion: "4-5 horas",
+        grupo: "2-8 personas",
+        ubicacion: "Medellín",
+        caracteristicas: [
+          "Comuna 13 y sus grafitis",
+          "Plaza Botero",
+          "Pueblito Paisa",
+          "Metrocable de San Javier",
+          "Zona de Provenza",
+          "Guía local especializado"
+        ],
+        imagenes: ["img/city1.jpg", "img/city2.jpg", "img/city3.jpg", "img/city4.webp", "img/city5.webp", "img/city6.jpg", "img/city7.jpeg", "img/city8.jpg", "img/city9.jpg", "img/city10.jpg", "img/city11.webp", "img/city12.avif", "img/medefer1.jpeg"]
+      },
+      cafe: {
+        titulo: "Tour del Café",
+        descripcion: "Conéctate con la esencia de Colombia a través de uno de sus mayores tesoros: el café. En este tour vivirás el día a día de un campesino cafetero. Aprenderás a sembrar, cosechar y procesar el grano, y finalizarás la jornada catando los distintos tipos de café colombiano. Disfruta de un entorno natural, conversa con caficultores locales y llévate contigo una experiencia inolvidable. Ideal para los amantes del café y la cultura rural.",
+        duracion: "6-7 horas",
+        grupo: "2-6 personas",
+        ubicacion: "Sabaneta, Antioquia",
+        caracteristicas: [
+          "Finca cafetera tradicional",
+          "Proceso de cultivo y cosecha",
+          "Cata de cafés especiales",
+          "Interacción con caficultores"
+        ],
+        imagenes: ["img/cafefer1.jpeg", "img/cafe2.jpg", "img/cafe3.webp", "img/cafefer2.jpeg", "img/cafe5.png", "img/cafefer4.jpeg"]
+      },
+      parapente: {
+        titulo: "Tour Parapente San Félix",
+        descripcion: "¡Atrévete a vivir una aventura única! Siente la adrenalina mientras sobrevuelas el majestuoso Valle de Aburrá en un vuelo en parapente desde San Félix, uno de los lugares más famosos de Colombia para practicar este deporte. Acompañado por instructores certificados, disfrutarás de una experiencia segura, emocionante y con vistas panorámicas que te dejarán sin aliento. ¡Una dosis de libertad y emoción!",
+        duracion: "3-4 horas",
+        grupo: "1-2 personas por vuelo",
+        ubicacion: "San Félix, Antioquia",
+        caracteristicas: [
+          "Vistas panorámicas increíbles",
+          "Instructores certificados",
+          "Equipo de seguridad profesional",
+          "Transporte incluido"
+        ],
+        imagenes: ["img/para1.jpg", "img/para2.jpg", "img/para3.jpg", "img/para4.jpg", "img/para5.jpg"]
+      },
+      guata: {
+        titulo: "Tour Guatapé",
+        descripcion: "Vive una experiencia inolvidable en uno de los destinos más mágicos de Antioquia. Nuestro tour a Guatapé te lleva a disfrutar de la impresionante Piedra del Peñol, una de las formaciones rocosas más altas del mundo, con más de 700 escalones que conducen a una vista panorámica espectacular de la represa. Recorre las coloridas calles de Guatapé, un pueblo lleno de vida, arte y cultura. Además, disfruta de emocionantes actividades náuticas, rodeado de paisajes naturales que te dejarán sin aliento. Una combinación perfecta de aventura, belleza natural y tradición paisa.",
+        duracion: "8-9 horas",
+        grupo: "2-8 personas",
+        ubicacion: "Guatapé, Antioquia",
+        caracteristicas: [
+          "Subida a la Piedra del Peñol",
+          "Recorrido por Guatapé",
+          "Paseo en lancha por el embalse",
+          "Tiempo libre para fotos",
+          "Transporte ida y vuelta"
+        ],
+        imagenes: ["img/guata1.webp", "img/Guatape2.jpg", "img/guata3.jpg", "img/guata7.jpeg", "img/guata8.jpg", "img/guata9.jpg", "img/guata10.webp"]
+      },
+      napoles: {
+        titulo: "Tour Hacienda Nápoles",
+        descripcion: "Explora el legado histórico y natural de la Hacienda Nápoles, la antigua propiedad de Pablo Escobar convertida hoy en un parque temático. Descubre su zoológico con especies exóticas, el museo, y relájate en el parque acuático con toboganes y piscinas para todas las edades. Ideal para familias, amigos y amantes de la aventura. ¡Un plan completo donde la historia, la naturaleza y la diversión se encuentran!",
+        duracion: "10-12 horas",
+        grupo: "2-8 personas",
+        ubicacion: "Puerto Triunfo, Antioquia",
+        caracteristicas: [
+          "Zoológico con especies exóticas",
+          "Parque acuático",
+          "Museo histórico",
+          "Safari africano",
+          "Transporte ida y vuelta"
+        ],
+        imagenes: ["img/napo1.jpg", "img/napo2.jpg", "img/napo3.jpg", "img/napo4.jpg", "img/cafe5.webp", "img/napo6.jpg", "img/napo7.jpeg", "img/napo9.jpg", "img/napo10.jpeg", "img/napo11.jpg"]
+      },
+      oriente: {
+        titulo: "Tour Pueblos de Antioquia",
+        descripcion: "Embárcate en un viaje lleno de color, sabor y tradición. Conoce la riqueza cultural de los encantadores pueblos del oriente antioqueño: La Ceja, El Retiro y Llanogrande. Caminaremos por calles empedradas, visitaremos mercados tradicionales, probaremos platos típicos y descubriremos artesanías locales. Una experiencia perfecta para quienes buscan tranquilidad, cultura y gastronomía en medio de paisajes encantadores.",
+        duracion: "6-7 horas",
+        grupo: "2-6 personas",
+        ubicacion: "Oriente Antioqueño",
+        caracteristicas: [
+          "La Ceja, El Retiro y Llanogrande",
+          "Arquitectura colonial",
+          "Gastronomía tradicional",
+          "Mercados artesanales",
+          "Guía local especializado"
+        ],
+        imagenes: ["img/ori1.jpeg", "img/ori2.jpg", "img/ori3.jpg", "img/ori4.jpg", "img/ori5.jpg", "img/ori6.jpg", "img/ori7.jpg", "img/puefer1.jpeg", "img/puefer2.jpeg"]
+      },
+      pablo: {
+        titulo: "Tour Histórico de Medellín",
+        descripcion: "Explora uno de los capítulos más controversiales y conocidos de la historia de Colombia a través de un recorrido por los lugares clave en la vida de Pablo Escobar: su antigua residencia, la tumba en el cementerio Montesacro, el barrio que ayudó a construir, entre otros. Comprenderas el impacto social, económico y cultural de su figura en Medellín. Más allá del mito popularizado por series y documentales, conocerás la realidad de una ciudad que ha sabido transformarse y renacer. Una experiencia de turismo consciente, enfocada en la memoria histórica y el aprendizaje.",
+        duracion: "3-4 horas",
+        grupo: "2-6 personas",
+        ubicacion: "Medellín",
+        caracteristicas: [
+          "Lugares emblemáticos",
+          "Enfoque en transformación social",
+          "Guía especializado",
+          "Contexto histórico completo",
+          "Perspectiva local auténtica"
+        ],
+        imagenes: ["img/pa1.jpg", "img/pa2.jpg", "img/pa3.jpg", "img/pa4.jpg", "img/pa5.jpg", "img/pacasa.jpeg"]
+      }
+    };
 
-            images = data.imagenes;
-            currentImageIndex = 0;
+    // Variables globales
+    let currentPlan = null;
+    let currentImageIndex = 0;
+    let currentImages = [];
+    let imageInterval;
 
-            const mainImage = document.getElementById("main-image");
-            const thumbnails = document.querySelector(".thumbnails");
-            thumbnails.innerHTML = "";
+    // Inicialización cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar slider
+      initSlider();
+      
+      // Inicializar navegación
+      initNavigation();
+      
+      // Inicializar formularios
+      initForms();
+      
+      // Inicializar carruseles
+      initCarousels();
+      
+      // Inicializar sistema de reseñas
+      initReviews();
+      
+      // Cargar reseñas destacadas
+      if (typeof loadFeaturedReviews === 'function') {
+        loadFeaturedReviews();
+      }
+    });
 
-            images.forEach((src, index) => {
-            const thumb = document.createElement("img");
-            thumb.src = src;
-            thumb.onclick = () => {
-                currentImageIndex = index;
-                mainImage.src = images[currentImageIndex];
-                resetImageInterval();
-            };
-            thumbnails.appendChild(thumb);
+    // Slider functions
+    function initSlider() {
+      const slides = document.querySelectorAll('.slide');
+      const indicators = document.querySelectorAll('.indicator');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+      }
+      
+      function nextSlide() {
+        let next = currentSlide + 1;
+        if (next >= slides.length) next = 0;
+        showSlide(next);
+      }
+      
+      // Cambiar slide cada 5 segundos
+      setInterval(nextSlide, 5000);
+      
+      // Agregar eventos a los indicadores
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+    }
+
+    // Navigation functions
+    function initNavigation() {
+      const navbar = document.getElementById('navbar');
+      const backToTop = document.getElementById('back-to-top');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+          backToTop.classList.add('visible');
+        } else {
+          navbar.classList.remove('scrolled');
+          backToTop.classList.remove('visible');
+        }
+      });
+      
+      // Mobile menu toggle
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
             });
-
-            mainImage.src = images[currentImageIndex];
-
-            modal.style.display = "flex";
-            startImageInterval();
-        }
-
-        function closePlanModal() {
-            document.getElementById("modal-plan").style.display = "none";
-            clearInterval(imageInterval);
-        }
-
-        function startImageInterval() {
-            imageInterval = setInterval(() => {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            document.getElementById("main-image").src = images[currentImageIndex];
-            }, 3500); // Cambia cada 4 segundos
-        }
-
-        function resetImageInterval() {
-            clearInterval(imageInterval);
-            startImageInterval();
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById("modal-plan");
-            if (event.target === modal) {
-            closePlanModal();
+            
+            // Cerrar menú móvil si está abierto
+            if (window.innerWidth <= 768) {
+              navLinks.classList.remove('active');
             }
-        };
-        function openMediaModal(src) {
-            // Pausar todos los videos visibles
-            document.querySelectorAll('video').forEach(video => {
-                video.pause();
-                video.currentTime = 0; // Opcional: reinicia desde el inicio
-            });
-
-            // Detectar si es video o imagen
-            const modal = document.getElementById('media-modal');
-            const content = document.getElementById('modal-media-content');
-            const isVideo = src.endsWith('.mp4');
-
-            content.innerHTML = isVideo
-                ? `<video src="${src}" controls autoplay onclick="enterFullscreen(this)" style="max-width: 100%; max-height: 100%;"></video>`
-                : `<img src="${src}" alt="Experiencia">`;
-
-            modal.style.display = 'flex';
+          }
+        });
+      });
+      
+      // Back to top button
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Cerrar menú móvil al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !e.target.closest('.nav-links') && 
+            !e.target.closest('.mobile-menu-btn') &&
+            navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
         }
-        function closeMediaModal() {
-            document.getElementById('media-modal').style.display = 'none';
-            document.getElementById('modal-media-content').innerHTML = '';
-        }
-        function scrollCarousel(id, direction) {
-            const carousel = document.getElementById(id);
-            const scrollAmount = 500; // puedes ajustar este valor
+      });
+    }
 
-            carousel.scrollBy({
-                left: direction * scrollAmount,
-                behavior: "smooth"
-            });
-        }
-        function enterFullscreen(videoElement) {
-        const isMobile = window.innerWidth <= 768;
+    // Plan modal functions
+    function openPlanModal(planId) {
+      currentPlan = planes[planId];
+      if (!currentPlan) return;
+      
+      currentImages = currentPlan.imagenes;
+      currentImageIndex = 0;
+      
+      // Actualizar contenido del modal
+      document.getElementById('modal-title').textContent = currentPlan.titulo;
+      document.getElementById('modal-duration').textContent = currentPlan.duracion;
+      document.getElementById('modal-group').textContent = currentPlan.grupo;
+      document.getElementById('modal-location').textContent = currentPlan.ubicacion;
+      document.getElementById('modal-description').textContent = currentPlan.descripcion;
+      
+      // Actualizar características
+      const featuresList = document.getElementById('modal-features-list');
+      featuresList.innerHTML = '';
+      currentPlan.caracteristicas.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+        featuresList.appendChild(li);
+      });
+      
+      // Actualizar imágenes
+      updateModalImages();
+      
+      // Mostrar modal
+      document.getElementById('plan-modal').style.display = 'flex';
+      
+      // Iniciar intervalo para cambiar imágenes automáticamente
+      startImageInterval();
+    }
 
-        if (isMobile && videoElement.requestFullscreen) {
-            videoElement.requestFullscreen();
-        } else if (isMobile && videoElement.webkitEnterFullscreen) {
-            // Para iOS (Safari)
-            videoElement.webkitEnterFullscreen();
-        }
-        }
-    </script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"></script>
-    <script type="module" src="/tu-script-firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    function closePlanModal() {
+      document.getElementById('plan-modal').style.display = 'none';
+      clearInterval(imageInterval);
+    }
+
+    function updateModalImages() {
+      const mainImage = document.getElementById('modal-main-image');
+      const thumbnailsContainer = document.getElementById('modal-thumbnails');
+      
+      // Actualizar imagen principal
+      mainImage.src = currentImages[currentImageIndex];
+      
+      // Actualizar miniaturas
+      thumbnailsContainer.innerHTML = '';
+      currentImages.forEach((src, index) => {
+        const thumb = document.createElement('div');
+        thumb.className = `modal-thumb ${index === currentImageIndex ? 'active' : ''}`;
+        thumb.innerHTML = `<img src="${src}" alt="Thumbnail ${index + 1}">`;
+        thumb.addEventListener('click', () => {
+          currentImageIndex = index;
+          updateModalImages();
+          resetImageInterval();
+        });
+        thumbnailsContainer.appendChild(thumb);
+      });
+    }
+
+    function changeImage(direction) {
+      currentImageIndex += direction;
+      
+      if (currentImageIndex < 0) {
+        currentImageIndex = currentImages.length - 1;
+      } else if (currentImageIndex >= currentImages.length) {
+        currentImageIndex = 0;
+      }
+      
+      updateModalImages();
+      resetImageInterval();
+    }
+
+    function startImageInterval() {
+      imageInterval = setInterval(() => {
+        changeImage(1);
+      }, 4000);
+    }
+
+    function resetImageInterval() {
+      clearInterval(imageInterval);
+      startImageInterval();
+    }
+
+    // Media modal functions - CORREGIDO
+    function openMediaModal(src, type) {
+      const modalContent = document.getElementById('modal-media-content');
+      
+      if (type === 'image') {
+        modalContent.innerHTML = `<img src="${src}" alt="Experiencia">`;
+      } else if (type === 'video') {
+        modalContent.innerHTML = `<video src="${src}" controls autoplay></video>`;
+      }
+      
+      document.getElementById('media-modal').style.display = 'flex';
+    }
+
+    function closeMediaModal() {
+      document.getElementById('media-modal').style.display = 'none';
+      document.getElementById('modal-media-content').innerHTML = '';
+    }
+
+    // Carousel functions
+    function initCarousels() {
+      // Agregar eventos de hover para los videos
+      document.querySelectorAll('.carousel-item video').forEach(video => {
+        video.addEventListener('mouseenter', () => {
+          video.play();
+        });
+        
+        video.addEventListener('mouseleave', () => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      });
+    }
+
+    function scrollCarousel(carouselId, direction) {
+      const carousel = document.getElementById(carouselId);
+      const scrollAmount = 300;
+      
+      carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    // Review functions
+    function initReviews() {
+      // Sistema de estrellas para la reseña
+      const stars = document.querySelectorAll('#star-rating i');
+      let selectedRating = 0;
+      
+      stars.forEach(star => {
+        star.addEventListener('mouseover', function() {
+          const rating = parseInt(this.getAttribute('data-rating'));
+          highlightStars(rating);
+        });
+        
+        star.addEventListener('mouseout', function() {
+          highlightStars(selectedRating);
+        });
+        
+        star.addEventListener('click', function() {
+          selectedRating = parseInt(this.getAttribute('data-rating'));
+          document.getElementById('review-rating').value = selectedRating;
+          highlightStars(selectedRating);
+        });
+      });
+      
+      function highlightStars(rating) {
+        stars.forEach(star => {
+          const starRating = parseInt(star.getAttribute('data-rating'));
+          if (starRating <= rating) {
+            star.classList.remove('far');
+            star.classList.add('fas');
+          } else {
+            star.classList.remove('fas');
+            star.classList.add('far');
+          }
+        });
+      }
+    }
+
+    function openReviewModal() {
+      document.getElementById('review-modal').style.display = 'flex';
+    }
+
+    function closeReviewModal() {
+      document.getElementById('review-modal').style.display = 'none';
+      document.getElementById('review-form').reset();
+      
+      // Resetear estrellas
+      document.querySelectorAll('#star-rating i').forEach(star => {
+        star.classList.remove('fas');
+        star.classList.add('far');
+      });
+      document.getElementById('review-rating').value = '';
+    }
+
+    function openAllReviewsModal() {
+      if (typeof loadAllReviews === 'function') {
+        loadAllReviews();
+      }
+      document.getElementById('all-reviews-modal').style.display = 'flex';
+    }
+
+    function closeAllReviewsModal() {
+      document.getElementById('all-reviews-modal').style.display = 'none';
+    }
+
+    // Form functions
+    function initForms() {
+      // Formulario de contacto
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Aquí iría la lógica para enviar el formulario
+        Swal.fire({
+          title: '¡Mensaje enviado!',
+          text: 'Te contactaremos pronto para planificar tu aventura en Medellín.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+        
+        this.reset();
+      });
+    }
+
+    // WhatsApp function
+    function contactWhatsApp() {
+      const message = currentPlan ? 
+        `Hola, estoy interesado en el tour: ${currentPlan.titulo}` : 
+        'Hola, estoy interesado en conocer más sobre los tours en Medellín';
+      
+      const url = `https://wa.me/573167510019?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // Cerrar modales al hacer clic fuera
+    window.addEventListener('click', function(e) {
+      const planModal = document.getElementById('plan-modal');
+      const mediaModal = document.getElementById('media-modal');
+      const reviewModal = document.getElementById('review-modal');
+      const allReviewsModal = document.getElementById('all-reviews-modal');
+      
+      if (e.target === planModal) {
+        closePlanModal();
+      }
+      
+      if (e.target === mediaModal) {
+        closeMediaModal();
+      }
+      
+      if (e.target === reviewModal) {
+        closeReviewModal();
+      }
+      
+      if (e.target === allReviewsModal) {
+        closeAllReviewsModal();
+      }
+    });
+  </script>
 </body>
 </html>
