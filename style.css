@@ -1303,7 +1303,7 @@ footer {
   /* --- GALERÍA DEL MODAL --- */
   .modal-gallery {
     width: 100% !important;
-    height: auto;
+    height: 300px;
   }
 
   .modal-image-container {
@@ -1332,6 +1332,7 @@ footer {
     height: auto;
     padding: 10px;
     gap: 8px;
+    display: none;
   }
 
   .modal-thumb {
